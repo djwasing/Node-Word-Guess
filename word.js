@@ -8,11 +8,9 @@ class Word {
     displayDashes() {
         var randomNum = Math.floor(Math.random() * (this.wordArr.length - 0) + 0);
         var word = this.wordArr[randomNum];
-        for (i = 0; i < word.length; i++) {
-            var dashWord = word.replace(i, "_");
-            console.log(dashWord);
-        }
-
+        var splitWord = word.split("");
+        var dashWord = splitWord.map(i => "_");
+        console.log(dashWord.join(" "));
     }
 }
 
