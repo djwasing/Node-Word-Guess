@@ -1,7 +1,7 @@
 class Letter {
     constructor(letter) {
     this.placeHolder = "_";
-    this.letter = letter;
+    this.letter = letter.toUpperCase();
     this.guessedYet = false;
     }
     guessFunc() {
@@ -14,13 +14,13 @@ class Letter {
     checkGuess(userInput) {
         if (userInput === this.letter) {
             this.guessedYet = true;
-            console.log(this.letter);
+            //console.log(userInput);
         }
     }
 }
 
 // var userInput = "b";
-// let x = new Letter("a");
+// let x = new Letter("c");
 // x.checkGuess(userInput);
 
 module.exports = Letter
